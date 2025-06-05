@@ -1,8 +1,4 @@
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>Q-Spatial Workshop – Home</title>
-</head>
 <body>
   <main class="card">
     <img src="QSpatial-logo.png" alt="QSpatial Workshop Logo" class="logo" />
