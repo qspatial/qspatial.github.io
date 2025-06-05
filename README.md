@@ -1,2 +1,54 @@
-# qspatial.github.io
-Q-Spatial Workshop on Quantum Computing in Spatial Applications
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Q-Spatial Workshop – Home</title>
+  <style>
+    /* Reset margins */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #f7f9fc;
+      display: flex;
+      min-height: 100vh;
+      align-items: center;
+      justify-content: center;
+      color: #222;
+    }
+
+    .card {
+      text-align: center;
+      padding: 2.5rem 3rem;
+      background: #fff;
+      border-radius: 18px;
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.06);
+    }
+
+    .logo {
+      width: 320px;      /* Tweak to taste */
+      max-width: 90vw;
+      height: auto;
+      margin-bottom: 1.8rem;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      font-size: 1.1rem;
+      letter-spacing: 0.2px;
+      color: #444;
+    }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <img src="QSpatial-logo.png" alt="QSpatial Workshop Logo" class="logo" />
+    <h1>Welcome to the Q-Spatial Workshop</h1>
+    <p>This is the homepage of the Quantum Computing for Spatial Applications (Q-Spatial) Workshop.</p>
+  </main>
+</body>
+</html>
