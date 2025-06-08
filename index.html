@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <title>Q-Spatial Workshop – Home</title>
   <style>
-    /* Reset margins */
+    /* Reset */
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
     body {
@@ -23,30 +23,49 @@
       background: #fff;
       border-radius: 18px;
       box-shadow: 0 12px 25px rgba(0, 0, 0, 0.06);
+      max-width: 720px;
     }
 
-    .logo {
-      width: 320px;      /* Tweak to taste */
-      max-width: 90vw;
-      height: auto;
+    /* Logo strip */
+    .logo-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 1.5rem;
       margin-bottom: 1.8rem;
     }
 
+    .logo-row img {
+      max-width: 45%;
+      height: auto;
+    }
+
+    /* Headline & text */
     h1 {
       font-size: 2rem;
       margin-bottom: 0.5rem;
     }
-
     p {
       font-size: 1.1rem;
       letter-spacing: 0.2px;
       color: #444;
     }
+
+    /* Slightly tighter logos on very narrow screens */
+    @media (max-width: 400px) {
+      .logo-row img { max-width: 70%; }
+    }
   </style>
 </head>
 <body>
   <main class="card">
-    <img src="QSpatial-logo.png" alt="QSpatial Workshop Logo" class="logo" />
+    <!-- Two logos in one elegant row -->
+    <div class="logo-row">
+      <img src="QSpatial-logo.png" alt="Q-Spatial Workshop Logo" />
+      <img src="IYQ2025-logo-transparent.png" alt="International Year of Quantum 2025 Logo" />
+    </div>
+
     <h1>Welcome to the Q-Spatial Workshop</h1>
     <p>This is the homepage of the first ACM SIGSPATIAL Quantum Computing for Spatial Applications (Q-Spatial) Workshop.</p>
   </main>
