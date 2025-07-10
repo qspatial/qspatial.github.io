@@ -1,85 +1,402 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-  <meta charset="UTF-8" />
-  <title>Q-Spatial Workshop – Home</title>
-  <style>
-    /* Reset */
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Q-Spatial 2025</title>
+    <link rel="icon" type="image/x-icon" href="icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <style type="text/css">
+        /* --- Global Styles --- */
+        body { 
+            margin: 0; 
+            padding: 0; 
+            font-family: 'Lato', sans-serif; 
+            font-size: 16px; 
+            background-color: #f4f7f6; 
+        }
+        html { scroll-behavior: smooth; }
+        #wrap { 
+            width: 1100px; 
+            margin: 40px auto; 
+            background-color: #fff; 
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        /* --- Header Styles --- */
+        #header {
+            background-image: linear-gradient(rgba(0, 43, 84, 0.7), rgba(0, 43, 84, 0.7)), url('https://images.pexels.com/photos/373543/pexels-photo-373543.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+            background-repeat: no-repeat; background-position: center center; background-size: cover;
+            color: white; 
+            padding: 40px 20px;
+        }
+        #header .title-box {
+            text-align: center; 
+            width: 90%;
+            margin: 0 auto;
+            text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+        }
+        #header h1 { font-size: 28px; font-weight: 700; margin: 0; }
+        #header p { font-size: 18px; margin: 10px 0 0; opacity: 0.9; }
+        
+        /* --- Menu Styles --- */
+        #menu { background-color: #003366; width: 100%; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        #menu table { width: 100%; border-collapse: collapse; }
+        #menu td { text-align: center; }
+        #menu a.menulink { 
+            color: white; 
+            text-decoration: none; 
+            font-weight: 700; 
+            font-size: 15px; 
+            padding: 18px 15px;
+            display: block;
+            transition: background-color 0.2s ease-in-out;
+            cursor: pointer;
+        }
+        #menu a.menulink:hover { background-color: #005a9c; }
+        #menu a.menulink.active { background-color: #005a9c; }
+        
+        /* --- Layout Styles --- */
+        .main { width: 100%; border-spacing: 0; }
+        #left { 
+            width: 260px; 
+            vertical-align: top; 
+            padding: 25px; 
+            background-color: #f8f9fa;
+            border-right: 1px solid #dee2e6;
+        }
+        #right { 
+            vertical-align: top; 
+            padding: 25px 35px;
+            min-height: 600px; /* Ensure consistent height */
+        }
+        
+        /* --- Left Column Content --- */
+        #left h2 { font-size: 20px; color: #003366; border-bottom: 2px solid #005a9c; padding-bottom: 8px; }
+        #left ul { list-style-type: none; padding-left: 0; }
+        #left ul li { 
+            margin-bottom: 20px; 
+            background-color: #ffffff;
+            padding: 12px;
+            border-left: 4px solid #005a9c;
+            border-radius: 4px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+        
+        /* --- Right Column Content --- */
+        .content-section { 
+            display: none; /* Hide all sections by default */
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+            margin-bottom: 40px; 
+        }
+        .content-section.active { 
+            display: block; 
+            opacity: 1;
+        }
+        
+        #right h2 { font-size: 2em; color: #003366; margin-bottom: 0; margin-top: 0; }
+        #right h3 { font-size: 1.6em; color: #003366; border-bottom: 2px solid #e9ecef; padding-bottom: 10px; margin-top: 40px; }
+        #right .subtitle { font-size: 1.1em; color: #6c757d; margin-top: 5px; font-style: italic; }
+        #right p, #right li { text-align: justify; line-height: 1.7; color: #343a40; }
+        #right a { color: #005a9c; font-weight: 700; text-decoration: none; }
+        #right a:hover { text-decoration: underline; }
+        #right hr { border: 0; border-top: 1px solid #dee2e6; margin: 40px 0; }
+        
+        /* --- Table Styling --- */
+        .schedule-table { width: 100%; border-collapse: collapse; margin-top: 20px; font-size: 15px; }
+        .schedule-table th, .schedule-table td { border: 1px solid #dee2e6; padding: 12px 15px; text-align: left; }
+        .schedule-table th { background-color: #e9ecef; font-weight: 700; color: #495057; }
+        .schedule-table tr:nth-child(even) { background-color: #f8f9fa; }
+        .schedule-table .break td { background-color: #f1f3f5; color: #6c757d; font-style: italic; }
+        
+        /* --- Footer --- */
+        #footer { clear: both; text-align: center; padding: 30px; font-size: 14px; color: #6c757d; background-color: #f8f9fa; border-top: 1px solid #dee2e6;}
+        
+        /* --- Loading Animation --- */
+        .content-loading {
+            text-align: center;
+            padding: 40px;
+            color: #6c757d;
+        }
 
-    body {
-      font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      background: #f7f9fc;
-      display: flex;
-      min-height: 100vh;
-      align-items: center;
-      justify-content: center;
-      color: #222;
-    }
-
-    .card {
-      text-align: center;
-      padding: 2.5rem 3rem;
-      background: #fff;
-      border-radius: 18px;
-      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.06);
-      max-width: 720px;
-    }
-
-    /* Logo strip */
-    .logo-row {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: center;
-      gap: 1.5rem;
-      margin-bottom: 1.8rem;
-    }
-
-    .logo-row img {
-      max-width: 45%;
-      height: auto;
-    }
-
-    /* Headline & text */
-    h1 {
-      font-size: 2rem;
-      margin-bottom: 0.5rem;
-    }
-    p {
-      font-size: 1.1rem;
-      letter-spacing: 0.2px;
-      color: #444;
-    }
-
-    /* Slightly tighter logos on very narrow screens */
-    @media (max-width: 400px) {
-      .logo-row img { max-width: 70%; }
-    }
-  </style>
+        /* --- Hide Important Dates --- */
+        #dates-section {
+            display: none;
+        }
+    </style>
 </head>
+
 <body>
-  <main class="card">
-<div class="logo-row">
-  <!-- Larger Q-Spatial logo -->
-  <img src="QSpatial-logo.png" alt="Q-Spatial Workshop Logo"
-       style="max-width:60%;height:auto;" />
+<div id="wrap">
+    <!-- ======================= HEADER ======================= -->
+    <div id="header">
+        <div class="title-box">
+            <h1>1st ACM SIGSPATIAL International Workshop on Quantum Computing and Quantum-Inspired Technologies for Spatial Data Systems and Applications</h1>
+            <p>(Q-Spatial 2025)</p>
+            <p>Co-located with the 33rd ACM SIGSPATIAL 2025 in Minneapolis, Minnesota, USA</p>
+            <p><strong>Monday, November 3, 2025</strong></p>
+        </div>
+    </div>
+
+    <!-- ======================== MENU ======================== -->
+    <div id="menu">
+        <table>
+            <tbody>
+                <tr>
+                    <td><a class="menulink active" data-page="home">Home</a></td>
+                    <td><a class="menulink" data-page="organizers">Organizers</a></td>
+                    <td><a class="menulink" data-page="program">Program</a></td>
+                    <td><a class="menulink" data-page="submission">Call for Participation</a></td>
+                    <td><a class="menulink" data-page="registration">Registration</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- ======================== MAIN CONTENT ======================== -->
+    <table class="main">
+        <tbody>
+            <tr>
+                <!-- ================== LEFT COLUMN =================== -->
+                <td id="left">
+                    <h2>Co-located with</h2>
+                    <p align="center">
+                        <a target="_blank" href="https://sigspatial2025.sigspatial.org">
+                            <img src="https://placehold.co/180x60/003366/FFFFFF?text=SIGSPATIAL+2025" border="0" alt="ACM SIGSPATIAL 2025" style="border-radius: 4px;">
+                        </a>
+                    </p>
+                    <br>
+                    <!-- =========== USER'S IMAGE GOES HERE =========== -->
+                    <p align="center">
+                        <img src="QSpatial-logo.png" alt="Workshop Image" style="width: 100%; height: auto; border-radius: 4px; margin-bottom: 20px;">
+                    </p>
+                    <!-- ============================================== -->
+                    <div id="dates-section">
+                        <h2 id="dates">Important Dates</h2>
+                        <ul>
+                            <li><b>Lighting Talk Submission:</b><br>September 15, 2025</li>
+                            <li><b>Notification of Decision:</b><br>September 23, 2025</li>
+                            <li><b>Backup Recorded Version:</b><br>November 1, 2025</li>
+                        </ul>
+                    </div>
+                </td>
+                
+                <!-- ================== RIGHT COLUMN (DYNAMIC CONTENT AREA) =================== -->
+                <td id="right">
+                    <!-- =========== HOME SECTION =========== -->
+                    <div id="home" class="content-section active">
+                        <h2>Welcome to Q-Spatial 2025</h2>
+                        <p class="subtitle">The 1st ACM SIGSPATIAL International Workshop on Quantum Computing and Quantum-Inspired Technologies for Spatial Data Systems and Applications</p>
+
+                        <h3>Workshop Overview</h3>
+                        <p>Quantum computing and other quantum-driven technologies have been a field of technology investment for decades. With promising potential, significant investments from many governmental and industrial parties are poured into winning the race. The SIGSPATIAL community is building a capacity in that promising technology field. This workshop aims to bring together SIGSPATIAL community members interested in exploring quantum technologies in spatial systems and applications. It will also invite non-SIGSPATIAL members who are experts in the field of quantum technologies to enrich the community and foster learning and collaboration. The workshop will be open to all levels of expertise, allowing participants to contribute or learn.</p>
+
+                        <!-- =========== GOALS SECTION =========== -->
+                        <h3>Workshop Mission and Goals</h3>
+                        <p>The high-level philosophy of organizing this workshop is engaging, motivating, encouraging, and helping interested SIGSPATIAL community members to explore spatial problems that could take advantage of quantum computing. This mission breaks down into the following goals:</p>
+                        <ol>
+                            <li>Community building: building a sub-community within ACM SIGSPATIAL that is interested in exploring research and applications using quantum technologies.</li>
+                            <li>Research innovations: pushing high-quality quantum-driven research into the mainstream SIGSPATIAL conference and other relevant journals and research venues.</li>
+                            <li>Community vision: building a community vision towards a rich and concrete agenda for SIGSPATIAL contributions to the quantum technologies field.</li>
+                        </ol>
+                        
+                        <!-- =========== IYQ SECTION =========== -->
+                        <h3>The International Year of Quantum 2025</h3>
+                        <p>On June 7, 2024, the United Nations General Assembly officially declared 2025 "The International Year of Quantum Science and Technology". Organizing this workshop will be part of the global community efforts to raise awareness about quantum computing technologies and their impact in the context of spatial data. Check <a href="https://quantum2025.org/" target="_blank">https://quantum2025.org/</a> for more details and events.</p>
+                        
+                        <p align="center" style="margin-top: 20px;">
+                            <a href="https://quantum2025.org/" target="_blank">
+                                <img src="image1.png" alt="International Year of Quantum 2025" style="width: 300px; height: auto; border-radius: 4px; cursor: pointer;">
+                            </a>
+                        </p>
+
+                        <hr>
+
+                        <h3>Updates</h3>
+                        <p>To be announced.</p>
+                    </div>
+
+                    <!-- =========== ORGANIZERS SECTION =========== -->
+                    <div id="organizers" class="content-section">
+                        <h2>Workshop Organizers</h2>
+                        <ul style="list-style-type: none; padding-left: 0;">
+                            <li style="margin-bottom: 25px; padding: 20px; background-color: #f8f9fa; border-radius: 8px; border-left: 4px solid #005a9c;">
+                                <h3 style="margin-top: 0; color: #003366;">Moustafa Youssef</h3>
+                                <p><strong>Professor of Computer Science and Engineering</strong><br>
+                                American University in Cairo, Egypt</p>
+                                <p>Email: <a href="mailto:moustafa-youssef@aucegypt.edu">moustafa-youssef@aucegypt.edu</a></p>
+                            </li>
+                            <li style="margin-bottom: 25px; padding: 20px; background-color: #f8f9fa; border-radius: 8px; border-left: 4px solid #005a9c;">
+                                <h3 style="margin-top: 0; color: #003366;">Ibrahim Sabek</h3>
+                                <p><strong>Assistant Professor of Computer Science and Spatial Sciences</strong><br>
+                                USC Spatial Sciences Institute<br>
+                                University of Southern California, Los Angeles, USA</p>
+                                <p>Email: <a href="mailto:sabek@usc.edu">sabek@usc.edu</a></p>
+                            </li>
+                            <li style="margin-bottom: 25px; padding: 20px; background-color: #f8f9fa; border-radius: 8px; border-left: 4px solid #005a9c;">
+                                <h3 style="margin-top: 0; color: #003366;">Amr Magdy</h3>
+                                <p><strong>Associate Professor of Computer Science and Engineering</strong><br>
+                                UCR Center for GeoSpatial Sciences<br>
+                                University of California, Riverside, USA</p>
+                                <p>Email: <a href="mailto:amr@cs.ucr.edu">amr@cs.ucr.edu</a></p>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- =========== PROGRAM SECTION =========== -->
+                    <div id="program" class="content-section">
+                        <h2>Workshop Program</h2>
+                        <p>The detailed workshop program will be added soon. The program is designed to provide both introductory material for newcomers and advanced content for experienced researchers. It will consist of:</p>
+                        
+                        <ul>
+                            <li><strong>Tutorials for newcomers</strong> on both quantum gate model and quantum annealing for optimization problems.</li>
+                            <li>Invited talks by experts from industry and the research community.</li>
+                            <li><strong>Hands-on session</strong> for programming on quantum computers.</li>
+                            <li><strong>Real use cases</strong> for quantum computing and technologies in spatial data systems and applications.</li>
+                            <li>Introduction to <strong>Quantum Machine Learning</strong> and its libraries and tools.</li>
+                            <li>Open discussion session for brainstorming a community vision for future steps of quantum computing within ACM SIGSPATIAL.</li>
+                        </ul>
+                    </div>
+
+                    <!-- =========== SUBMISSION SECTION =========== -->
+                    <div id="submission" class="content-section">
+                        <h2>Call for Participation</h2>
+                        <p>To be added</p>
+                    </div>
+
+                    <!-- =========== REGISTRATION SECTION =========== -->
+                    <div id="registration" class="content-section">
+                        <p>Registration for the Q-Spatial 2025 workshop will be handled through the main conference registration system.</p>
+                        
+                        <h3>How to Register</h3>
+                        <p>Please visit the <a href="https://sigspatial2025.sigspatial.org/" target="_blank">ACM SIGSPATIAL 2025 Conference Website</a> for details on registration fees and procedures.</p>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- ======================= FOOTER ======================= -->
+    <div id="footer">
+        <p>&copy; 2025 Q-Spatial Workshop Organizers. All Rights Reserved.</p>
+    </div>
 </div>
 
+<!--
+BACKUP - Original Call for Lightning Talks content:
+<h2>Call for Lightning Talks</h2>
+<p>We invite proposals for short lighting talks in the context of quantum spatial applications and systems. This call is open to everyone interested in sharing their work, ideas, or vision.</p>
 
-    <h1>Welcome to the Q-Spatial Workshop</h1>
-    <p>This is the homepage of the first ACM SIGSPATIAL Quantum Computing for Spatial Applications (Q-Spatial) Workshop.</p>
+<h3>Submission Guidelines</h3>
+<p>Details on the format and submission procedure for lightning talks will be announced soon. Please check back for updates.</p>
 
-    <div class="logo-row">
-    <!-- Smaller IYQ 2025 logo, opens in new tab -->
-  <a href="https://quantum2025.org/" target="_blank"
-     style="display:inline-block;">
-    <img src="IYQ2025-logo-transparent.png"
-         alt="International Year of Quantum 2025 Logo"
-         style="max-width:25%;height:auto;" />
-    </div>
-  </a>
+<h3>Topics of Interest</h3>
+<p>We welcome lightning talks on (but not limited to) the following topics:</p>
+<ul>
+    <li>Quantum algorithms for spatial data processing</li>
+    <li>Quantum machine learning for geographic information systems</li>
+    <li>Quantum-inspired optimization for spatial problems</li>
+    <li>Quantum sensing and positioning technologies</li>
+    <li>Quantum computing applications in transportation and logistics</li>
+    <li>Quantum annealing for spatial optimization problems</li>
+</ul>
+
+<h3>Important Dates</h3>
+<ul>
+    <li><strong>Lightning Talk Submission:</strong> September 15, 2025</li>
+    <li><strong>Notification of Decision:</strong> September 23, 2025</li>
+    <li><strong>Backup Recorded Version:</strong> November 1, 2025</li>
+</ul>
+-->
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Get all menu links and content sections
+    const menuLinks = document.querySelectorAll('#menu a.menulink');
+    const contentSections = document.querySelectorAll('.content-section');
+    const rightColumn = document.getElementById('right');
     
-  </main>
+    // Function to show a specific page
+    function showPage(pageId) {
+        // Hide all content sections
+        contentSections.forEach(section => {
+            section.classList.remove('active');
+        });
+        
+        // Remove active class from all menu links
+        menuLinks.forEach(link => {
+            link.classList.remove('active');
+        });
+        
+        // Show the selected content section
+        const targetSection = document.getElementById(pageId);
+        if (targetSection) {
+            // Scroll to top of content area
+            rightColumn.scrollTop = 0;
+            
+            // Brief delay for smooth transition
+            setTimeout(() => {
+                targetSection.classList.add('active');
+            }, 50);
+        }
+        
+        // Add active class to clicked menu item
+        const activeLink = document.querySelector(`[data-page="${pageId}"]`);
+        if (activeLink) {
+            activeLink.classList.add('active');
+        }
+        
+        // Update page title
+        updatePageTitle(pageId);
+    }
+    
+    // Function to update page title based on current section
+    function updatePageTitle(pageId) {
+        const titles = {
+            'home': 'Q-Spatial 2025 - Home',
+            'organizers': 'Q-Spatial 2025 - Organizers', 
+            'program': 'Q-Spatial 2025 - Program',
+            'submission': 'Q-Spatial 2025 - Call for Participation',
+            'registration': 'Q-Spatial 2025 - Registration'
+        };
+        
+        document.title = titles[pageId] || 'Q-Spatial 2025';
+    }
+    
+    // Add click event listeners to menu links
+    menuLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault(); // Prevent default anchor behavior
+            
+            const pageId = this.getAttribute('data-page');
+            if (pageId) {
+                showPage(pageId);
+                
+                // Update URL without page reload (optional)
+                if (history.pushState) {
+                    history.pushState(null, null, `#${pageId}`);
+                }
+            }
+        });
+    });
+    
+    // Handle browser back/forward buttons
+    window.addEventListener('popstate', function() {
+        const hash = window.location.hash.substring(1); // Remove # from hash
+        const pageId = hash || 'home'; // Default to home if no hash
+        showPage(pageId);
+    });
+    
+    // Initialize page based on URL hash
+    const initialHash = window.location.hash.substring(1);
+    const initialPage = initialHash || 'home';
+    showPage(initialPage);
+});
+</script>
+
 </body>
 </html>
