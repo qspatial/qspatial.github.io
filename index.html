@@ -86,6 +86,16 @@
             box-shadow: 0 1px 3px rgba(0,0,0,0.05);
         }
         
+        /* --- Sponsor Styles --- */
+        .sponsor-level {
+            font-size: 18px;
+            color: #495057;
+            text-align: center;
+            font-weight: 700;
+            margin-top: 10px;
+            margin-bottom: 15px;
+        }
+        
         /* --- Right Column Content --- */
         .content-section { 
             display: none; /* Hide all sections by default */
@@ -132,7 +142,6 @@
 
 <body>
 <div id="wrap">
-    <!-- ======================= HEADER ======================= -->
     <div id="header">
         <div class="title-box">
             <h1>1st ACM SIGSPATIAL International Workshop on Quantum Computing and Quantum-Inspired Technologies for Spatial Data Systems and Applications</h1>
@@ -142,7 +151,6 @@
         </div>
     </div>
 
-    <!-- ======================== MENU ======================== -->
     <div id="menu">
         <table>
             <tbody>
@@ -157,11 +165,9 @@
         </table>
     </div>
 
-    <!-- ======================== MAIN CONTENT ======================== -->
     <table class="main">
         <tbody>
             <tr>
-                <!-- ================== LEFT COLUMN =================== -->
                 <td id="left">
                     <h2>Co-located with</h2>
                     <p align="center">
@@ -170,11 +176,16 @@
                         </a>
                     </p>
                     <br>
-                    <!-- =========== USER'S IMAGE GOES HERE =========== -->
                     <p align="center">
                         <img src="QSpatial-logo.png" alt="Workshop Image" style="width: 100%; height: auto; border-radius: 4px; margin-bottom: 20px;">
                     </p>
-                    <!-- ============================================== -->
+                    <h2>Corporate Sponsors</h2>
+                    <div style="margin-top: 20px;"> <p align="center">
+                            <a href="https://www.dwavesys.com/" target="_blank">
+                                <img src="D_Wave_Logo.jpg" alt="D-Wave Logo" style="width: 216px; margin-bottom: 15px;">
+                            </a>
+                        </p>
+                    </div>
                     <div id="dates-section">
                         <h2 id="dates">Important Dates</h2>
                         <ul>
@@ -185,9 +196,7 @@
                     </div>
                 </td>
                 
-                <!-- ================== RIGHT COLUMN (DYNAMIC CONTENT AREA) =================== -->
                 <td id="right">
-                    <!-- =========== HOME SECTION =========== -->
                     <div id="home" class="content-section active">
                         <h2>Welcome to Q-Spatial 2025</h2>
                         <p class="subtitle">The 1st ACM SIGSPATIAL International Workshop on Quantum Computing and Quantum-Inspired Technologies for Spatial Data Systems and Applications</p>
@@ -195,7 +204,6 @@
                         <h3>Workshop Overview</h3>
                         <p>Quantum computing and other quantum-driven technologies have been a field of technology investment for decades. With promising potential, significant investments from many governmental and industrial parties are poured into winning the race. The SIGSPATIAL community is building a capacity in that promising technology field. This workshop aims to bring together SIGSPATIAL community members interested in exploring quantum technologies in spatial systems and applications. It will also invite non-SIGSPATIAL members who are experts in the field of quantum technologies to enrich the community and foster learning and collaboration. The workshop will be open to all levels of expertise, allowing participants to contribute or learn.</p>
 
-                        <!-- =========== GOALS SECTION =========== -->
                         <h3>Workshop Mission and Goals</h3>
                         <p>The high-level philosophy of organizing this workshop is engaging, motivating, encouraging, and helping interested SIGSPATIAL community members to explore spatial problems that could take advantage of quantum computing. This mission breaks down into the following goals:</p>
                         <ol>
@@ -204,7 +212,6 @@
                             <li>Community vision: building a community vision towards a rich and concrete agenda for SIGSPATIAL contributions to the quantum technologies field.</li>
                         </ol>
                         
-                        <!-- =========== IYQ SECTION =========== -->
                         <h3>The International Year of Quantum 2025</h3>
                         <p>On June 7, 2024, the United Nations General Assembly officially declared 2025 "The International Year of Quantum Science and Technology". Organizing this workshop will be part of the global community efforts to raise awareness about quantum computing technologies and their impact in the context of spatial data. Check <a href="https://quantum2025.org/" target="_blank">https://quantum2025.org/</a> for more details and events.</p>
                         
@@ -217,10 +224,11 @@
                         <hr>
 
                         <h3>Updates</h3>
-                        <p>To be announced.</p>
+                        <ul>
+                           <li>We are thrilled to announce that <a href="https://www.dwavesys.com/" target="_blank">D-Wave</a> has joined as a sponsor for Q-Spatial 2025!</li>
+                        </ul>
                     </div>
 
-                    <!-- =========== ORGANIZERS SECTION =========== -->
                     <div id="organizers" class="content-section">
                         <h2>Workshop Organizers</h2>
                         <ul style="list-style-type: none; padding-left: 0;">
@@ -247,7 +255,6 @@
                         </ul>
                     </div>
 
-                    <!-- =========== PROGRAM SECTION =========== -->
                     <div id="program" class="content-section">
                         <h2>Workshop Program</h2>
                         <p>The detailed workshop program will be added soon. The program is designed to provide both introductory material for newcomers and advanced content for experienced researchers. It will consist of:</p>
@@ -262,13 +269,11 @@
                         </ul>
                     </div>
 
-                    <!-- =========== SUBMISSION SECTION =========== -->
                     <div id="submission" class="content-section">
                         <h2>Call for Participation</h2>
                         <p>To be added</p>
                     </div>
 
-                    <!-- =========== REGISTRATION SECTION =========== -->
                     <div id="registration" class="content-section">
                         <p>Registration for the Q-Spatial 2025 workshop will be handled through the main conference registration system.</p>
                         
@@ -280,38 +285,10 @@
         </tbody>
     </table>
 
-    <!-- ======================= FOOTER ======================= -->
     <div id="footer">
         <p>&copy; 2025 Q-Spatial Workshop Organizers. All Rights Reserved.</p>
     </div>
 </div>
-
-<!--
-BACKUP - Original Call for Lightning Talks content:
-<h2>Call for Lightning Talks</h2>
-<p>We invite proposals for short lighting talks in the context of quantum spatial applications and systems. This call is open to everyone interested in sharing their work, ideas, or vision.</p>
-
-<h3>Submission Guidelines</h3>
-<p>Details on the format and submission procedure for lightning talks will be announced soon. Please check back for updates.</p>
-
-<h3>Topics of Interest</h3>
-<p>We welcome lightning talks on (but not limited to) the following topics:</p>
-<ul>
-    <li>Quantum algorithms for spatial data processing</li>
-    <li>Quantum machine learning for geographic information systems</li>
-    <li>Quantum-inspired optimization for spatial problems</li>
-    <li>Quantum sensing and positioning technologies</li>
-    <li>Quantum computing applications in transportation and logistics</li>
-    <li>Quantum annealing for spatial optimization problems</li>
-</ul>
-
-<h3>Important Dates</h3>
-<ul>
-    <li><strong>Lightning Talk Submission:</strong> September 15, 2025</li>
-    <li><strong>Notification of Decision:</strong> September 23, 2025</li>
-    <li><strong>Backup Recorded Version:</strong> November 1, 2025</li>
-</ul>
--->
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
