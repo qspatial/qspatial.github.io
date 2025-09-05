@@ -8,7 +8,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
     <style type="text/css">
-        /* --- Global Styles --- */
         body { 
             margin: 0; 
             padding: 0; 
@@ -26,7 +25,6 @@
             overflow: hidden;
         }
         
-        /* --- Header Styles --- */
         #header {
             background-image: linear-gradient(rgba(0, 43, 84, 0.7), rgba(0, 43, 84, 0.7)), url('https://images.pexels.com/photos/373543/pexels-photo-373543.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
             background-repeat: no-repeat; background-position: center center; background-size: cover;
@@ -42,7 +40,6 @@
         #header h1 { font-size: 28px; font-weight: 700; margin: 0; }
         #header p { font-size: 18px; margin: 10px 0 0; opacity: 0.9; }
         
-        /* --- Menu Styles --- */
         #menu { background-color: #003366; width: 100%; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
         #menu table { width: 100%; border-collapse: collapse; }
         #menu td { text-align: center; }
@@ -59,7 +56,6 @@
         #menu a.menulink:hover { background-color: #005a9c; }
         #menu a.menulink.active { background-color: #005a9c; }
         
-        /* --- Layout Styles --- */
         .main { width: 100%; border-spacing: 0; }
         #left { 
             width: 260px; 
@@ -71,10 +67,9 @@
         #right { 
             vertical-align: top; 
             padding: 25px 35px;
-            min-height: 600px; /* Ensure consistent height */
+            min-height: 600px;
         }
         
-        /* --- Left Column Content --- */
         #left h2 { font-size: 20px; color: #003366; border-bottom: 2px solid #005a9c; padding-bottom: 8px; }
         #left ul { list-style-type: none; padding-left: 0; }
         #left ul li { 
@@ -86,7 +81,6 @@
             box-shadow: 0 1px 3px rgba(0,0,0,0.05);
         }
         
-        /* --- Sponsor Styles --- */
         .sponsor-level {
             font-size: 18px;
             color: #495057;
@@ -96,9 +90,8 @@
             margin-bottom: 15px;
         }
         
-        /* --- Right Column Content --- */
         .content-section { 
-            display: none; /* Hide all sections by default */
+            display: none;
             opacity: 0;
             transition: opacity 0.3s ease-in-out;
             margin-bottom: 40px; 
@@ -116,24 +109,20 @@
         #right a:hover { text-decoration: underline; }
         #right hr { border: 0; border-top: 1px solid #dee2e6; margin: 40px 0; }
         
-        /* --- Table Styling --- */
         .schedule-table { width: 100%; border-collapse: collapse; margin-top: 20px; font-size: 15px; }
         .schedule-table th, .schedule-table td { border: 1px solid #dee2e6; padding: 12px 15px; text-align: left; }
         .schedule-table th { background-color: #e9ecef; font-weight: 700; color: #495057; }
         .schedule-table tr:nth-child(even) { background-color: #f8f9fa; }
         .schedule-table .break td { background-color: #f1f3f5; color: #6c757d; font-style: italic; }
         
-        /* --- Footer --- */
         #footer { clear: both; text-align: center; padding: 30px; font-size: 14px; color: #6c757d; background-color: #f8f9fa; border-top: 1px solid #dee2e6;}
         
-        /* --- Loading Animation --- */
         .content-loading {
             text-align: center;
             padding: 40px;
             color: #6c757d;
         }
 
-        /* --- Hide Important Dates --- */
         #dates-section {
             display: none;
         }
@@ -201,20 +190,29 @@
                         <h2>Welcome to Q-Spatial 2025</h2>
                         <p class="subtitle">The 1st ACM SIGSPATIAL International Workshop on Quantum Computing and Quantum-Inspired Technologies for Spatial Data Systems and Applications</p>
 
-                        <h3>Keynote Speaker</h3>
-                        <table style="width: 100%; border: 0; margin-bottom: 20px;">
-                            <tbody>
-                                <tr>
-                                    <td style="width: 200px; padding: 10px; vertical-align: top;">
-                                        <img src="cpotts.jpg" alt="Catherine Potts, Ph.D." style="width: 180px; height: auto; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
-                                    </td>
-                                    <td style="padding: 10px; vertical-align: middle;">
-                                        <h4 style="margin-top: 0; margin-bottom: 10px; font-size: 1.4em; color: #003366;">Catherine Potts, Ph.D.</h4>
-                                        <p style="margin: 0; text-align: left;"><strong>Principal Technical Account Manager</strong><br>D-Wave Quantum Inc.</p>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
+                        <div style="margin-top: 40px; margin-bottom: 20px;">
+                            <h3 style="font-size: 1.8em; text-align: center; color: #003366; margin-bottom: 25px; border-bottom: 2px solid #e9ecef; padding-bottom: 15px;">Keynote: “D-Wave Quantum Optimization Realized”</h3>
+
+                            <h4 style="font-size: 1.4em; color: #003366; border-bottom: none; padding-bottom: 0px; margin-top: 25px; margin-bottom: 10px;">Abstract</h4>
+                            <p>Quantum computing promises to accelerate computational power in a variety of application spaces. D-Wave Quantum Inc. has targeted optimization problems with its quantum annealing hardware, hybrid quantum-classical software, and services. In this talk, we will explore the different use cases tackled by D-Wave’s technology, including areas of scheduling, allocation, and querying. An introduction to quantum computing will be provided, as well as an example of how research using quantum optimization has expanded as the technology has improved over the past 10 years.</p>
+
+                            <h4 style="font-size: 1.4em; color: #003366; border-bottom: none; padding-bottom: 0px; margin-top: 25px; margin-bottom: 15px;">Speaker</h4>
+                            <table style="width: 100%; border: 0;">
+                                <tbody>
+                                    <tr>
+                                        <td style="width: 180px; padding-right: 20px; vertical-align: top; text-align: center;">
+                                            <img src="cpotts.jpg" alt="Catherine Potts, Ph.D." style="width: 162px; height: auto; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+                                            <p style="margin: 10px 0 0 0; font-size: 1.1em; color: #003366; line-height: 1.4; text-align: left; display: inline-block;"><strong>Catherine Potts, Ph.D.</strong><br>
+                                            <span style="font-size: 0.9em; color: #343a40;">Technical Advisor,<br>D-Wave Quantum Inc.</span></p>
+                                        </td>
+                                        <td style="vertical-align: top;">
+                                            <p style="margin-top: 0;">Dr. Catherine Potts is a technical advisor at D-Wave Quantum Inc., assisting clients in building quantum optimization applications for commercial and research use. She has a PhD in applied mathematics from Montana State University, focused on adapting machine learning algorithms to scientific imaging. Since 2020, she’s been focused on building quantum computing applications for different types of quantum hardware, including D-Wave’s quantum annealing and hybrid technology.</p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
 
                         <h3>Workshop Overview</h3>
                         <p>Quantum computing and other quantum-driven technologies have been a field of technology investment for decades. With promising potential, significant investments from many governmental and industrial parties are poured into winning the race. The SIGSPATIAL community is building a capacity in that promising technology field. This workshop aims to bring together SIGSPATIAL community members interested in exploring quantum technologies in spatial systems and applications. It will also invite non-SIGSPATIAL members who are experts in the field of quantum technologies to enrich the community and foster learning and collaboration. The workshop will be open to all levels of expertise, allowing participants to contribute or learn.</p>
@@ -308,46 +306,36 @@
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-    // Get all menu links and content sections
     const menuLinks = document.querySelectorAll('#menu a.menulink');
     const contentSections = document.querySelectorAll('.content-section');
     const rightColumn = document.getElementById('right');
     
-    // Function to show a specific page
     function showPage(pageId) {
-        // Hide all content sections
         contentSections.forEach(section => {
             section.classList.remove('active');
         });
         
-        // Remove active class from all menu links
         menuLinks.forEach(link => {
             link.classList.remove('active');
         });
         
-        // Show the selected content section
         const targetSection = document.getElementById(pageId);
         if (targetSection) {
-            // Scroll to top of content area
             rightColumn.scrollTop = 0;
             
-            // Brief delay for smooth transition
             setTimeout(() => {
                 targetSection.classList.add('active');
             }, 50);
         }
         
-        // Add active class to clicked menu item
         const activeLink = document.querySelector(`[data-page="${pageId}"]`);
         if (activeLink) {
             activeLink.classList.add('active');
         }
         
-        // Update page title
         updatePageTitle(pageId);
     }
     
-    // Function to update page title based on current section
     function updatePageTitle(pageId) {
         const titles = {
             'home': 'Q-Spatial 2025 - Home',
@@ -360,16 +348,14 @@ document.addEventListener('DOMContentLoaded', function() {
         document.title = titles[pageId] || 'Q-Spatial 2025';
     }
     
-    // Add click event listeners to menu links
     menuLinks.forEach(link => {
         link.addEventListener('click', function(e) {
-            e.preventDefault(); // Prevent default anchor behavior
+            e.preventDefault();
             
             const pageId = this.getAttribute('data-page');
             if (pageId) {
                 showPage(pageId);
                 
-                // Update URL without page reload (optional)
                 if (history.pushState) {
                     history.pushState(null, null, `#${pageId}`);
                 }
@@ -377,14 +363,12 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Handle browser back/forward buttons
     window.addEventListener('popstate', function() {
-        const hash = window.location.hash.substring(1); // Remove # from hash
-        const pageId = hash || 'home'; // Default to home if no hash
+        const hash = window.location.hash.substring(1);
+        const pageId = hash || 'home';
         showPage(pageId);
     });
     
-    // Initialize page based on URL hash
     const initialHash = window.location.hash.substring(1);
     const initialPage = initialHash || 'home';
     showPage(initialPage);
