@@ -147,6 +147,7 @@
                     <td><a class="menulink active" data-page="home">Home</a></td>
                     <td><a class="menulink" data-page="organizers">Organizers</a></td>
                     <td><a class="menulink" data-page="program">Program</a></td>
+                    <td><a class="menulink" data-page="quantumlab">Quantum Lab</a></td>
                     <td><a class="menulink" data-page="submission">Call for Participation</a></td>
                     <td><a class="menulink" data-page="registration">Registration</a></td>
                 </tr>
@@ -364,6 +365,42 @@
                         </ul>
                     </div>
 
+                    <div id="quantumlab" class="content-section">
+                        <h2>Quantum Lab: Hands-on Demonstrations</h2>
+                        <p class="subtitle">Explore quantum computing through practical examples</p>
+                        
+                        <p>Welcome to the Quantum Lab! This hands-on session features four interactive demonstrations that showcase the power of quantum computing using D-Wave. Each demo is designed to help you understand quantum computing concepts through practical applications.</p>
+                        
+                        <hr>
+                        
+                        <h3>Demo 1: At Most One Scoop</h3>
+                        <p><strong>Objective:</strong> Introduction to unconstrained optimization</p>
+                        <p>This demo introduces the basics of quantum optimization by solving a simple ice cream purchase problem. You'll learn how to formulate an unconstrained minimization problem where the goal is to select at most one ice cream flavor (vanilla or chocolate) while minimizing cost.</p>
+
+                        
+                        <h3>Demo 2: Exactly One Scoop</h3>
+                        <p><strong>Objective:</strong> Introduction to quantum constraint with penalty</p>
+                        <p>Building on the previous demo, this example adds a constraint requiring exactly one ice cream scoop to be purchased. You'll learn how to enforce hard constraints in quantum optimization by incorporating penalty terms into the objective function.</p>
+
+                        
+                        <h3>Demo 3: Graph Partitioning with CQM</h3>
+                        <p><strong>Objective:</strong> Solving spatial optimization problems using Constrained Quadratic Models</p>
+                        <p>This demonstration tackles a classic spatial computing problem: partitioning a  graph into balanced regions while minimizing the number of edges cut between regions. Using D-Wave's Constrained Quadratic Model (CQM) solver, you'll see how to handle complex constraints including one-hot encoding (each node belongs to exactly one partition) and partition size requirements.</p>
+
+                        
+                        <h3>Demo 4: Graph Partitioning with NL-Solver</h3>
+                        <p><strong>Objective:</strong> Advanced spatial optimization using Nonlinear Models</p>
+                        <p>This advanced demo solves the same graph partitioning problem using D-Wave's Nonlinear (NL) solver, which supports more flexible variable types and constraints. Instead of binary one-hot variables, this approach uses integer variables to directly represent partition assignments. You'll learn how the NL-solver enables more natural problem formulations for spatial optimization and compare its performance with the CQM approach.</p>
+           
+                        
+                        <hr>
+                        
+                        <h3>Demo Code Link:</h3>
+                        <ul>
+                            <li>https://github.com/qspatial/Q-Spatial-Demo</li>
+                          
+                    </div>
+
                     <div id="submission" class="content-section">
                         <h2>Call for Participation</h2>
                         
@@ -440,6 +477,7 @@ document.addEventListener('DOMContentLoaded', function() {
             'organizers': 'Q-Spatial 2025 - Organizers', 
             'program': 'Q-Spatial 2025 - Program',
             'submission': 'Q-Spatial 2025 - Call for Participation',
+            'quantumlab': 'Q-Spatial 2025 - Quantum Lab',
             'registration': 'Q-Spatial 2025 - Registration'
         };
         
