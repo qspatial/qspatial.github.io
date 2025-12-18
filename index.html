@@ -126,6 +126,26 @@
         #dates-section {
             display: none;
         }
+        
+        /* Video Container for responsive aspect ratio */
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 */
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            background: #000;
+            margin-top: 20px;
+            border-radius: 4px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
     </style>
 </head>
 
@@ -150,6 +170,7 @@
                     <td><a class="menulink" data-page="quantumlab">Quantum Lab</a></td>
                     <td><a class="menulink" data-page="submission">Call for Participation</a></td>
                     <td><a class="menulink" data-page="registration">Registration</a></td>
+                    <td><a class="menulink" data-page="recordings">Recordings</a></td>
                 </tr>
             </tbody>
         </table>
@@ -405,7 +426,7 @@
                         <h3>Demo Code Link:</h3>
                         <ul>
                             <li>https://github.com/qspatial/Q-Spatial-Demo</li>
-                          
+                        </ul>
                     </div>
 
                     <div id="submission" class="content-section">
@@ -435,6 +456,17 @@
                         
                         <h3>How to Register</h3>
                         <p>Please visit the <a href="https://sigspatial2025.sigspatial.org/" target="_blank">ACM SIGSPATIAL 2025 Conference Website</a> for details on registration fees and procedures.</p>
+                    </div>
+
+                    <div id="recordings" class="content-section">
+                        <h2>Workshop Recordings</h2>
+                        <p class="subtitle">Watch the sessions from Q-Spatial 2025</p>
+                        
+                        <p>Below you can find the complete playlist of recordings from the 1st ACM SIGSPATIAL International Workshop on Quantum Computing and Quantum-Inspired Technologies for Spatial Data Systems and Applications. This includes the keynote, tutorials, and lightning talks.</p>
+                        
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/cuOtdSVjg90?list=PLd1EcSmWzPFd5jDy8uI2nmq9CEPM9FuMQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
                     </div>
                 </td>
             </tr>
@@ -485,7 +517,8 @@ document.addEventListener('DOMContentLoaded', function() {
             'program': 'Q-Spatial 2025 - Program',
             'submission': 'Q-Spatial 2025 - Call for Participation',
             'quantumlab': 'Q-Spatial 2025 - Quantum Lab',
-            'registration': 'Q-Spatial 2025 - Registration'
+            'registration': 'Q-Spatial 2025 - Registration',
+            'recordings': 'Q-Spatial 2025 - Recordings'
         };
         
         document.title = titles[pageId] || 'Q-Spatial 2025';
