@@ -128,6 +128,17 @@
             border-radius: 4px;
         }
         .archive-list li a { font-size: 1.1em; }
+
+        .paper-list { list-style-type: none; padding-left: 0; }
+        .paper-list li {
+            margin-bottom: 15px;
+            padding: 18px 20px;
+            background-color: #f8f9fa;
+            border-left: 4px solid #B91D4A;
+            border-radius: 4px;
+        }
+        #right .paper-list .paper-title { display: block; font-weight: 700; color: #8A1538; font-size: 1.05em; margin-bottom: 6px; text-align: left; }
+        #right .paper-list .paper-authors { display: block; color: #495057; text-align: left; line-height: 1.6; }
     </style>
 </head>
 
@@ -150,6 +161,7 @@
                     <td><a class="menulink active" data-page="home">Home</a></td>
                     <td><a class="menulink" data-page="organizers">Organizers</a></td>
                     <td><a class="menulink" data-page="program">Program</a></td>
+                    <td><a class="menulink" data-page="papers">Accepted Papers</a></td>
                     <td><a class="menulink" data-page="submission">Call for Papers</a></td>
                     <td><a class="menulink" data-page="archive">Previous Workshops</a></td>
                 </tr>
@@ -234,6 +246,32 @@
                     <div id="program" class="content-section">
                         <h2>Workshop Program</h2>
                         <p>The detailed program for Q-Spatial 2026 will be announced closer to the workshop date. Please check back later for updates on tutorials, keynote speakers, and the full schedule.</p>
+                    </div>
+
+                    <div id="papers" class="content-section">
+                        <h2>Accepted Papers</h2>
+                        <ul class="paper-list">
+                            <li>
+                                <span class="paper-title">The Quantum Geometry&reg; Grand Challenge: A Multiyear Prize and Benchmark Program for Quantum Computing in Geometry, CAD, GIS, and Meshing</span>
+                                <span class="paper-authors">W. Randolph Franklin (Quantum Geometry LLC, Henderson, Nevada, USA)</span>
+                            </li>
+                            <li>
+                                <span class="paper-title">The Hidden Cost of Quantum Spatial Computing: From Oracle Complexity to Circuit Complexity</span>
+                                <span class="paper-authors">Po-Yu Yeh (National Taiwan Normal University, Taipei, Taiwan), Tzu-Cheng Chang (National Taiwan University, Taipei, Taiwan), Xiao Huang (Emory University, Atlanta, USA), Chun-Hsiang Chan (National Taiwan Normal University, Taipei, Taiwan)</span>
+                            </li>
+                            <li>
+                                <span class="paper-title">Quantum Machine Learning for Satellite Trajectory Prediction: A 3-Axis Specialized Quantum Regressor</span>
+                                <span class="paper-authors">Mohamed Masmoudi (National School of Computer Science, Manouba, Tunisia), Fatma Masmoudi (Arab Open University, Riyadh, KSA), Abdulaziz Alenazi (Prince Sattam Bin Abdulaziz University, Alkharj, KSA)</span>
+                            </li>
+                            <li>
+                                <span class="paper-title">Entanglement-Aware Adaptive Routing for Optimizing Distributed Quantum Computing over Quantum Interconnect Networks</span>
+                                <span class="paper-authors">Tianrong DING (University of Pennsylvania)</span>
+                            </li>
+                            <li>
+                                <span class="paper-title">Towards Quantum Range Query for Spatial-Temporal-Semantic Trajectory Data</span>
+                                <span class="paper-authors">Hao Li (National University of Singapore), Zhihang Liu (The Chinese University of Hong Kong), Liwei Zou (The Hong Kong University of Science and Technology, Guangzhou), Jinlin Wu (The Hong Kong University of Science and Technology, Guangzhou), Wufan Zhao (The Hong Kong University of Science and Technology, Guangzhou)</span>
+                            </li>
+                        </ul>
                     </div>
 
                     <div id="submission" class="content-section">
@@ -530,6 +568,7 @@ document.addEventListener('DOMContentLoaded', function() {
             'home': 'Q-Spatial 2026 - Home',
             'organizers': 'Q-Spatial 2026 - Organizers',
             'program': 'Q-Spatial 2026 - Program',
+            'papers': 'Q-Spatial 2026 - Accepted Papers',
             'submission': 'Q-Spatial 2026 - Call for Papers',
             'archive': 'Q-Spatial 2026 - Previous Workshops'
         };
