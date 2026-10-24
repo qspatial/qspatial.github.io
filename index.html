@@ -140,6 +140,15 @@
         #right .paper-list .paper-title { display: block; font-weight: 700; color: #8A1538; font-size: 1.05em; margin-bottom: 6px; text-align: left; }
         #right .paper-list .paper-authors { display: block; color: #495057; text-align: left; line-height: 1.6; }
 
+        .schedule-table { width: 100%; border-collapse: collapse; margin-top: 20px; font-size: 15px; }
+        .schedule-table th, .schedule-table td { border: 1px solid #E0CDD3; padding: 12px 15px; text-align: left; vertical-align: top; line-height: 1.6; }
+        .schedule-table th { background-color: #8A1538; color: #fff; font-weight: 700; }
+        .schedule-table td:first-child { width: 150px; font-weight: 700; color: #8A1538; white-space: nowrap; }
+        .schedule-table .break td { background-color: #f8f9fa; color: #6c757d; font-style: italic; }
+        #right .schedule-table ul { margin: 6px 0 0; padding-left: 20px; }
+        #right .schedule-table li { text-align: left; line-height: 1.6; margin-bottom: 6px; }
+        .schedule-table em { color: #495057; }
+
         .keynote {
             margin: 25px 0 35px;
             padding: 22px 26px;
@@ -172,7 +181,7 @@
             <tbody>
                 <tr>
                     <td><a class="menulink active" data-page="home">Home</a></td>
-                    <td><a class="menulink" data-page="organizers">Organizers</a></td>
+                    <td><a class="menulink" data-page="organizers">Organizers and PC</a></td>
                     <td><a class="menulink" data-page="program">Program</a></td>
                     <td><a class="menulink" data-page="keynotes">Keynotes</a></td>
                     <td><a class="menulink" data-page="papers">Accepted Papers</a></td>
@@ -244,7 +253,8 @@
                                 <h3 style="margin-top: 0; color: #8A1538;">Amr Magdy</h3>
                                 <p><strong>Associate Professor of Computer Science and Engineering</strong><br>
                                 UCR Center for GeoSpatial Sciences<br>
-                                University of California, Riverside, USA</p>
+                                University of California, Riverside, USA<br>
+                                Qatar Computing Research Institute (QCRI), Hamad Bin Khalifa University (HBKU)</p>
                                 <p>Email: <a href="mailto:amr@cs.ucr.edu">amr@cs.ucr.edu</a></p>
                             </li>
                             <li style="margin-bottom: 25px; padding: 20px; background-color: #f8f9fa; border-radius: 8px; border-left: 4px solid #B91D4A;">
@@ -255,11 +265,93 @@
                                 <p>Email: <a href="mailto:ychan268@ucr.edu">ychan268@ucr.edu</a></p>
                             </li>
                         </ul>
+
+                        <h3>Program Committee</h3>
+                        <ul class="paper-list">
+                            <li>
+                                <span class="paper-title">Amr Magdy</span>
+                                <span class="paper-authors">University of California, Riverside / Qatar Computing Research Institute (QCRI), Hamad Bin Khalifa University (HBKU)</span>
+                            </li>
+                            <li>
+                                <span class="paper-title">Ibrahim Sabek</span>
+                                <span class="paper-authors">University of Southern California</span>
+                            </li>
+                            <li>
+                                <span class="paper-title">W Randolph Franklin</span>
+                                <span class="paper-authors">Quantum Geometry LLC / Rensselaer Polytechnic Institute (RPI)</span>
+                            </li>
+                            <li>
+                                <span class="paper-title">Yaron Kanza</span>
+                                <span class="paper-authors">AT&amp;T Research</span>
+                            </li>
+                        </ul>
                     </div>
 
                     <div id="program" class="content-section">
                         <h2>Workshop Program</h2>
-                        <p>The detailed program for Q-Spatial 2026 will be announced closer to the workshop date. Please check back later for updates on tutorials, keynote speakers, and the full schedule.</p>
+                        <h3>Schedule - Tuesday, November 3, 2026</h3>
+                        <table class="schedule-table">
+                            <thead>
+                                <tr>
+                                    <th>Time</th>
+                                    <th>Session</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="break">
+                                    <td>8:00 - 8:25 AM</td>
+                                    <td>Registration</td>
+                                </tr>
+                                <tr>
+                                    <td>8:25 - 8:30 AM</td>
+                                    <td><strong>Opening Remarks</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>8:30 - 9:30 AM</td>
+                                    <td><strong>Keynote Talk</strong><br>Fundamental Physics and Precision Measurements in Space<br><em>by Dr. John Callas, Deputy Director, Quantum Space Innovation Center, NASA Jet Propulsion Laboratory, Pasadena</em></td>
+                                </tr>
+                                <tr>
+                                    <td>9:30 - 10:00 AM</td>
+                                    <td><strong>Quantum Awareness</strong><ul><li>Introduction to Q-World</li><li>Introduction to IEEE Quantum Week</li></ul></td>
+                                </tr>
+                                <tr class="break">
+                                    <td>10:00 - 10:30 AM</td>
+                                    <td>Coffee Break</td>
+                                </tr>
+                                <tr>
+                                    <td>10:30 AM - 12:30 PM</td>
+                                    <td><strong>Paper Session</strong><ul><li><strong>Quantum Machine Learning for Satellite Trajectory Prediction: A 3-Axis Specialized Quantum Regressor.</strong> Mohamed Masmoudi (National School of Computer Science, Manouba, Tunisia), Fatma Masmoudi (Arab Open University, Riyadh, KSA), Abdulaziz Alenazi (Prince Sattam Bin Abdulaziz University, Alkharj, KSA)</li><li><strong>The Quantum Geometry&reg; Grand Challenge: A Multiyear Prize and Benchmark Program for Quantum Computing in Geometry, CAD, GIS, and Meshing.</strong> W. Randolph Franklin (Quantum Geometry LLC, Henderson, Nevada, USA)</li><li><strong>The Hidden Cost of Quantum Spatial Computing: From Oracle Complexity to Circuit Complexity.</strong> Po-Yu Yeh (National Taiwan Normal University, Taipei, Taiwan), Tzu-Cheng Chang (National Taiwan University, Taipei, Taiwan), Xiao Huang (Emory University, Atlanta, USA), Chun-Hsiang Chan (National Taiwan Normal University, Taipei, Taiwan)</li><li><strong>Entanglement-Aware Adaptive Routing for Optimizing Distributed Quantum Computing over Quantum Interconnect Networks.</strong> Tianrong DING (University of Pennsylvania)</li><li><strong>Towards Quantum Range Query for Spatial-Temporal-Semantic Trajectory Data.</strong> Hao Li (National University of Singapore), Zhihang Liu (The Chinese University of Hong Kong), Liwei Zou (The Hong Kong University of Science and Technology, Guangzhou), Jinlin Wu (The Hong Kong University of Science and Technology, Guangzhou), Wufan Zhao (The Hong Kong University of Science and Technology, Guangzhou)</li></ul></td>
+                                </tr>
+                                <tr class="break">
+                                    <td>12:30 - 1:30 PM</td>
+                                    <td>Lunch Break</td>
+                                </tr>
+                                <tr>
+                                    <td>2:00 - 3:00 PM</td>
+                                    <td><strong>Keynote Talk</strong><br>Bridging Quantum Machine Learning and Spatial Systems: Harnessing Quantum Computing for Geographic and Spatial Applications<br><em>by Dr. Thilanka Munasinghe, Lead Research Specialist, Rensselaer Polytechnic Institute (RPI)</em></td>
+                                </tr>
+                                <tr>
+                                    <td>3:00 - 3:30 PM</td>
+                                    <td><strong>Main Conference Guests (Invited Talks)</strong><ul><li><strong>Quantum Optimization in Spatial Computing: A Vision</strong><br>Amr Magdy (University of California, Riverside / Qatar Computing Research Institute (QCRI), Hamad Bin Khalifa University (HBKU)), Ibrahim Sabek (University of Southern California) and Moustafa Youssef (The American University in Cairo)</li><li><strong>Quantum Spatial Regionalization</strong><br>Yunhan Chang (University of California, Riverside)</li></ul></td>
+                                </tr>
+                                <tr class="break">
+                                    <td>3:30 - 4:00 PM</td>
+                                    <td>Coffee Break</td>
+                                </tr>
+                                <tr>
+                                    <td>4:00 - 4:15 PM</td>
+                                    <td><strong>Main Conference Guests (Invited Talks)</strong><ul><li><strong>Geospatial Intelligence for Quantum Communication Networks</strong><br>Yaron Kanza (AT&amp;T Research), Divesh Srivastava (AT&amp;T) and William Trost (AT&amp;T)</li></ul></td>
+                                </tr>
+                                <tr>
+                                    <td>4:15 - 5:45 PM</td>
+                                    <td><strong>Panel: Quantum Technologies in Spatial Computing: The Next Five-Year Horizon</strong><br><em>Moderator:</em> Amr Magdy, University of California, Riverside / Qatar Computing Research Institute (QCRI), Hamad Bin Khalifa University (HBKU)<br><em>Panelists:</em><ul><li>Thilanka Munasinghe, Rensselaer Polytechnic Institute (RPI)</li><li>Yaron Kanza, AT&amp;T</li><li>Ibrahim Sabek, University of Southern California (USC)</li></ul></td>
+                                </tr>
+                                <tr>
+                                    <td>5:45 - 6:00 PM</td>
+                                    <td><strong>Closing Remarks</strong></td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
 
                     <div id="keynotes" class="content-section">
@@ -606,7 +698,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function updatePageTitle(pageId) {
         const titles = {
             'home': 'Q-Spatial 2026 - Home',
-            'organizers': 'Q-Spatial 2026 - Organizers',
+            'organizers': 'Q-Spatial 2026 - Organizers and PC',
             'program': 'Q-Spatial 2026 - Program',
             'keynotes': 'Q-Spatial 2026 - Keynotes',
             'papers': 'Q-Spatial 2026 - Accepted Papers',
